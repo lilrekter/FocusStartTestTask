@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		D8252A332B9E076500165504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8252A322B9E076500165504 /* AppDelegate.swift */; };
 		D8252A352B9E076500165504 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8252A342B9E076500165504 /* SceneDelegate.swift */; };
-		D8252A372B9E076500165504 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8252A362B9E076500165504 /* ViewController.swift */; };
+		D8252A372B9E076500165504 /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8252A362B9E076500165504 /* NotesListViewController.swift */; };
 		D8252A3A2B9E076500165504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8252A382B9E076500165504 /* Main.storyboard */; };
 		D8252A3C2B9E076800165504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8252A3B2B9E076800165504 /* Assets.xcassets */; };
 		D8252A3F2B9E076800165504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8252A3D2B9E076800165504 /* LaunchScreen.storyboard */; };
+		D8252A4B2B9E13A200165504 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8252A4A2B9E13A200165504 /* Note.swift */; };
+		D8252A512B9E34E000165504 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8252A502B9E34E000165504 /* NoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D8252A2F2B9E076500165504 /* FocusStartTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusStartTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8252A322B9E076500165504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8252A342B9E076500165504 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D8252A362B9E076500165504 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D8252A362B9E076500165504 /* NotesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewController.swift; sourceTree = "<group>"; };
 		D8252A392B9E076500165504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8252A3B2B9E076800165504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8252A3E2B9E076800165504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D8252A402B9E076800165504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8252A402B9E076800165504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../../../../Users/vitalybelikov/Documents/Прогинг/Тестовые задания/FocusStartTestTask/FocusStartTestTask/Supporting/Info.plist"; sourceTree = DEVELOPER_DIR; };
+		D8252A4A2B9E13A200165504 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		D8252A502B9E34E000165504 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		D8252A312B9E076500165504 /* FocusStartTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				D8252A462B9E0B6400165504 /* Model */,
+				D8252A472B9E0B7100165504 /* View */,
+				D8252A482B9E0B7900165504 /* Controller */,
+				D8252A492B9E0BA000165504 /* Supporting */,
+			);
+			path = FocusStartTestTask;
+			sourceTree = "<group>";
+		};
+		D8252A462B9E0B6400165504 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8252A4A2B9E13A200165504 /* Note.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8252A472B9E0B7100165504 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8252A382B9E076500165504 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8252A482B9E0B7900165504 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8252A362B9E076500165504 /* NotesListViewController.swift */,
+				D8252A502B9E34E000165504 /* NoteViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D8252A492B9E0BA000165504 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
 				D8252A322B9E076500165504 /* AppDelegate.swift */,
 				D8252A342B9E076500165504 /* SceneDelegate.swift */,
-				D8252A362B9E076500165504 /* ViewController.swift */,
-				D8252A382B9E076500165504 /* Main.storyboard */,
 				D8252A3B2B9E076800165504 /* Assets.xcassets */,
 				D8252A3D2B9E076800165504 /* LaunchScreen.storyboard */,
 				D8252A402B9E076800165504 /* Info.plist */,
 			);
-			path = FocusStartTestTask;
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8252A372B9E076500165504 /* ViewController.swift in Sources */,
+				D8252A372B9E076500165504 /* NotesListViewController.swift in Sources */,
 				D8252A332B9E076500165504 /* AppDelegate.swift in Sources */,
 				D8252A352B9E076500165504 /* SceneDelegate.swift in Sources */,
+				D8252A512B9E34E000165504 /* NoteViewController.swift in Sources */,
+				D8252A4B2B9E13A200165504 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -289,12 +329,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8B274TVL49;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FocusStartTestTask/Info.plist;
+				INFOPLIST_FILE = FocusStartTestTask/Supporting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,12 +358,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8B274TVL49;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FocusStartTestTask/Info.plist;
+				INFOPLIST_FILE = FocusStartTestTask/Supporting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
