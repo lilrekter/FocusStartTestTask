@@ -34,6 +34,10 @@ class NotesListViewController: UITableViewController {
         configureTableView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        dataSource.apply(notesSnapShot, animatingDifferences: true)
+    }
     
     // MARK: @Objc Methods
     
@@ -42,6 +46,7 @@ class NotesListViewController: UITableViewController {
         notes.append(newNote)
         
         dataSource.apply(notesSnapShot)
+        saveNotes()
     }
     
     // MARK: View Configuration
@@ -70,7 +75,6 @@ extension NotesListViewController: NoteViewControllerDelegate {
     func saveEditedNote(_ note: Note) {
         if let selectedIndexPath = tableView.indexPathForSelectedRow {
             notes[selectedIndexPath.row] = note
-            dataSource.apply(notesSnapShot)
         }
         
         saveNotes()
@@ -118,6 +122,28 @@ extension NotesListViewController {
         noteVC.delegate = self
         
         navigationController?.pushViewController(noteVC, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        let config = UIContextMenuConfiguration(actionProvider:  { _ in
+            
+            let renameButton = UIAction(title: "Rename") { [weak self] action in
+                let ac = UIAlertController(title: "Title", message: "Name your note", preferredStyle: .alert)
+                ac.addTextField()
+                ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self, weak ac] _ in
+                    guard let self = self else { return }
+                    guard let name = ac?.textFields?[0].text, name.count > 0 else { return }
+                          
+                    self.notes[indexPath.row].name = name
+                    self.dataSource.apply(self.notesSnapShot)
+                    self.saveNotes()
+                }))
+                self?.present(ac, animated: true)
+            }
+            return UIMenu(children: [renameButton])
+        })
+        return config
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
