@@ -22,11 +22,7 @@ struct Note: Hashable, Codable {
     }
     
     static func sampleNotes() -> [Note] {
-        return [
-            Note(name: "First note", text: "First note text"),
-            Note(name: "Second note", text: "Second note text"),
-            Note(name: "Third note", text: "Third note text")
-        ]
+        return [Note(name: "Your First Note", text: "First note text")]
     }
     
     static func saveNotes(_ notes: [Note]) {

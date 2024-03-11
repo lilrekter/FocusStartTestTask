@@ -76,7 +76,6 @@ extension NotesListViewController: NoteViewControllerDelegate {
         if let selectedIndexPath = tableView.indexPathForSelectedRow {
             notes[selectedIndexPath.row] = note
         }
-        
         saveNotes()
     }
     
@@ -113,6 +112,10 @@ extension NotesListViewController {
 
 extension NotesListViewController {
     // MARK: Table View Delegate
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedNote = notes[indexPath.row]

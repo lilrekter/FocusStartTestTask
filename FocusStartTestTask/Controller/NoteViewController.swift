@@ -51,6 +51,8 @@ class NoteViewController: UIViewController, UITextViewDelegate {
     
     private func setupTextView() {
         noteTextView.delegate = self
+        noteTextView.font = UIFont.systemFont(ofSize: 20)
+        noteTextView.allowsEditingTextAttributes = true
         
         self.view.addSubview(noteTextView)
         
